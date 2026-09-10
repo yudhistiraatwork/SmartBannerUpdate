@@ -15,7 +15,7 @@ const featureSlides = [
     title: "Dengar Berita Lewat Podcast",
   },
   {
-    image: "Assets/MockupVideo.png",
+    image: "Assets/MockupVideoBaru.png",
     imageAlt: "Mockup fitur video Kompas.com",
     title: "Tonton Berita, Lebih Seru",
   },
@@ -24,7 +24,7 @@ const featureSlides = [
 const visual = document.querySelector("[data-feature-visual]");
 const title = document.querySelector("[data-feature-title]");
 const transitionDuration = 420;
-const showcaseDuration = 2500;
+const showcaseDuration = 1000;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 let activeSlide = 0;
