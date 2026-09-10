@@ -5,7 +5,7 @@ const featureSlides = [
     title: "KOMPAS.com Official App",
   },
   {
-    image: "Assets/MockupLogo.png",
+    image: "Assets/MockupWP.png",
     imageAlt: "Mockup aplikasi Kompas.com",
     title: "Baca Berita Lebih Nyaman",
   },
@@ -24,7 +24,7 @@ const featureSlides = [
 const visual = document.querySelector("[data-feature-visual]");
 const title = document.querySelector("[data-feature-title]");
 const transitionDuration = 420;
-const showcaseDuration = 3800;
+const showcaseDuration = 2500;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 let activeSlide = 0;
