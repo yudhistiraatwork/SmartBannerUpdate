@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#121212" />
+    <title>Kompas.com Travel - Smart Banner</title>
+    <link rel="preload" as="image" href="Assets/MockupLogo.png" />
+    <link rel="preload" as="image" href="Assets/MockupPodcast.png" />
+    <link rel="preload" as="image" href="Assets/MockupVideo.png" />
+    <link rel="preload" as="image" href="Assets/figma-star.svg" />
+    <link rel="preload" as="image" href="Assets/figma-star-half.svg" />
+    <link rel="preload" as="image" href="Assets/figma-dot.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-preview">
+      <section class="advertisement" aria-label="Ruang iklan">
+        <div class="advertisement__notice">
+          <span>Iklan - Scroll ke bawah untuk melanjutkan</span>
+          <span class="advertisement__close" aria-hidden="true">&times;</span>
+        </div>
+        <div class="advertisement__slot" aria-label="Advertisement"></div>
+
+        <aside class="smart-banner" aria-label="Unduh aplikasi Kompas.com">
+          <div class="smart-banner__surface">
+            <div class="smart-banner__visual-frame">
+              <img
+                class="smart-banner__visual"
+                src="Assets/MockupLogo.png"
+                alt="Mockup aplikasi Kompas.com"
+                width="48"
+                height="60"
+                data-feature-visual
+              />
+            </div>
+
+            <div class="smart-banner__content">
+              <div class="smart-banner__details">
+                <div class="smart-banner__message-viewport">
+                  <p class="smart-banner__title" data-feature-title>KOMPAS.com Official App</p>
+                </div>
+                <div class="smart-banner__rating" aria-label="Penilaian 4.6 dari 5">
+                  <span class="smart-banner__stars" aria-hidden="true">
+                    <img src="Assets/figma-star.svg" alt="" width="12" height="12" />
+                    <img src="Assets/figma-star.svg" alt="" width="12" height="12" />
+                    <img src="Assets/figma-star.svg" alt="" width="12" height="12" />
+                    <img src="Assets/figma-star.svg" alt="" width="12" height="12" />
+                    <img src="Assets/figma-star-half.svg" alt="" width="12" height="12" />
+                  </span>
+                  <span class="smart-banner__rating-copy">
+                    <span class="smart-banner__score">4.6</span>
+                    <img class="smart-banner__dot" src="Assets/figma-dot.svg" alt="" width="12" height="12" aria-hidden="true" />
+                    <span class="smart-banner__price">Gratis</span>
+                  </span>
+                </div>
+              </div>
+
+              <button class="smart-banner__install" type="button" aria-label="Instal aplikasi Kompas.com">Instal</button>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <header class="kompas-header">
+        <div class="status-bar" aria-label="Status perangkat">
+          <span>5:13 PM</span>
+          <span class="status-bar__indicators" aria-hidden="true">&#9672; &#8902; &#9678; &#9646;</span>
+        </div>
+        <div class="kompas-header__main">
+          <a class="kompas-wordmark" href="#utama" aria-label="Kompas.com, beranda">
+            <span>KOMPAS</span><b>.com</b><small>JERNIH MELIHAT DUNIA</small>
+          </a>
+          <div class="kompas-header__actions" aria-label="Tautan utilitas">
+            <button type="button" aria-label="Kompas Shop"><span class="bag-icon" aria-hidden="true"></span></button>
+            <button type="button" aria-label="Mode terang">&#9788;</button>
+            <button type="button" aria-label="Kompas Plus">K+</button>
+            <button type="button" aria-label="Cari dan menu"><span class="menu-search" aria-hidden="true"></span></button>
+          </div>
+        </div>
+        <nav class="travel-navigation" aria-label="Navigasi Travel">
+          <a class="travel-navigation__section" href="#utama">Travel</a>
+          <a href="#travel-news">Travel News</a>
+          <a href="#travel-ideas">Travel Ideas</a>
+          <a href="#hotel-story">Hotel Story</a>
+        </nav>
+      </header>
+
+      <main id="utama" class="content">
+        <section class="infeed-ad" aria-label="Advertisement"></section>
+        <p class="subscription-prompt">Baca berita tanpa iklan. <a href="#plus">Gabung Kompas.com+</a></p>
+
+        <section class="trending" aria-label="Topik trending">
+          <strong>TRENDING:</strong>
+          <a href="#ferdy">Ferdy Sambo</a>
+          <a href="#cacar">Cacar Monyet</a>
+          <a href="#perjalanan">Perjalanan</a>
+        </section>
+
+        <article class="lead-story">
+          <div class="lead-story__visual" role="img" aria-label="Pesawat komersial di landasan bandara">
+            <span class="lead-story__cloud lead-story__cloud--one"></span>
+            <span class="lead-story__cloud lead-story__cloud--two"></span>
+            <span class="lead-story__plane" aria-hidden="true"></span>
+            <span class="lead-story__label">Headline</span>
+            <span class="lead-story__pager" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <h1>7 Maskapai yang Naikkan Tarif dan Kurangi Rute, Imbas Harga Avtur Naik</h1>
+        </article>
+
+        <section class="story-grid" aria-label="Berita Travel terbaru">
+          <article class="story-card">
+            <div class="story-card__visual story-card__visual--dubai" role="img" aria-label="Pemandangan kota Dubai"></div>
+            <h2>Liburan di Dubai dengan Budget Rp 1 Juta per Hari? Bisa, Ini Panduan Lengkapnya</h2>
+            <p>News</p>
+          </article>
+          <article class="story-card">
+            <div class="story-card__visual story-card__visual--cafe" role="img" aria-label="Suasana kedai kopi"></div>
+            <h2>10 Kedai Kopi Paling Keren di Dunia, Nomor 1 Ada di Museum</h2>
+            <p>News</p>
+          </article>
+          <article class="story-card">
+            <div class="story-card__visual story-card__visual--island" role="img" aria-label="Pemandangan pulau dan laut"></div>
+            <h2>Harga Hotel Uni Emirat Arab Terjun Bebas, Imbas Konflik Timur Tengah</h2>
+            <p>News</p>
+          </article>
+          <article class="story-card">
+            <div class="story-card__visual story-card__visual--train" role="img" aria-label="Kereta api melintas di pedesaan"></div>
+            <h2>KA Pandalungan 2 Gambir-Jember PP Beroperasi 18 Juni 2026</h2>
+            <p>News</p>
+          </article>
+          <article class="story-card">
+            <div class="story-card__visual story-card__visual--rail" role="img" aria-label="Kereta cepat di stasiun"></div>
+            <h2>Diskon Tiket Whoosh 20 Persen untuk Libur Sekolah</h2>
+            <p>News</p>
+          </article>
+          <article class="story-card">
+            <div class="story-card__visual story-card__visual--house" role="img" aria-label="Rumah tradisional Jepang"></div>
+            <h2>Intip Lizukatei, Rumah Kuno 200 Tahun yang Bertransformasi Jadi Hotel Butik di Jepang</h2>
+            <p>News</p>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
