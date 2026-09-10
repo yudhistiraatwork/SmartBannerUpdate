@@ -791,6 +791,220 @@ button {
   line-height: 1.3;
 }
 
+/* Keep the 360px composition as the phone baseline, then give the same
+   interface enough room to breathe on portrait and landscape tablets. */
+@media (min-width: 600px) {
+  .site-preview {
+    width: min(100%, 960px);
+    box-shadow: 0 0 28px rgb(0 0 0 / 12%);
+  }
+
+  .advertisement__notice {
+    height: 34px;
+    font-size: 9px;
+  }
+
+  .advertisement__close {
+    top: 8px;
+    right: 32px;
+  }
+
+  .advertisement__slot {
+    width: min(calc(100% - 64px), 640px);
+    height: clamp(360px, 62vw, 480px);
+  }
+
+  .smart-banner {
+    height: 76px;
+  }
+
+  .smart-banner__surface,
+  .smart-banner__content {
+    height: 64px;
+  }
+
+  .smart-banner__visual-frame,
+  .smart-banner__visual {
+    width: 56px;
+    height: 70px;
+  }
+
+  .smart-banner__visual-frame {
+    left: 32px;
+  }
+
+  .smart-banner__content {
+    padding: 0 32px 0 108px;
+  }
+
+  .smart-banner__message-viewport {
+    height: 20px;
+  }
+
+  .smart-banner__title {
+    font-size: 15px;
+  }
+
+  .smart-banner__rating {
+    gap: 5px;
+    padding-top: 4px;
+    font-size: 12px;
+  }
+
+  .smart-banner__stars,
+  .smart-banner__stars img,
+  .smart-banner__dot,
+  .smart-banner__rating-copy {
+    height: 14px;
+  }
+
+  .smart-banner__stars img,
+  .smart-banner__dot {
+    width: 14px;
+  }
+
+  .smart-banner__score {
+    width: 26px;
+  }
+
+  .smart-banner__price {
+    width: 35px;
+  }
+
+  .smart-banner__install {
+    width: 60px;
+    height: 34px;
+    border-radius: 9px;
+    padding: 7px 10px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .status-bar {
+    height: 34px;
+    padding: 0 32px;
+    font-size: 12px;
+  }
+
+  .kompas-header__main,
+  .kompas-header__actions {
+    height: 56px;
+  }
+
+  .kompas-header__main {
+    padding: 0 20px 0 32px;
+  }
+
+  .kompas-wordmark {
+    height: 35px;
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .kompas-wordmark b {
+    font-size: 17px;
+  }
+
+  .kompas-wordmark small {
+    font-size: 6px;
+  }
+
+  .kompas-header__actions button {
+    width: 48px;
+    height: 56px;
+  }
+
+  .travel-navigation,
+  .travel-navigation a {
+    height: 44px;
+  }
+
+  .travel-navigation {
+    padding: 0 20px;
+  }
+
+  .travel-navigation a {
+    padding: 0 16px;
+    font-size: 15px;
+  }
+
+  .travel-navigation .travel-navigation__section {
+    padding-left: 12px;
+    font-size: 20px;
+  }
+
+  .infeed-ad {
+    width: min(calc(100% - 64px), 640px);
+    height: 120px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+  }
+
+  .subscription-prompt {
+    padding: 0 32px 20px;
+    font-size: 12px;
+  }
+
+  .trending {
+    height: 56px;
+    gap: 16px;
+    padding: 0 32px;
+  }
+
+  .trending strong,
+  .trending a {
+    font-size: 13px;
+  }
+
+  .trending a + a {
+    padding-left: 16px;
+  }
+
+  .lead-story {
+    margin: 24px 32px;
+  }
+
+  .lead-story__visual {
+    height: 280px;
+  }
+
+  .lead-story h1 {
+    padding: 18px 20px 20px;
+    font-size: 21px;
+  }
+
+  .story-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 20px;
+    padding: 8px 32px 40px;
+  }
+
+  .story-card__visual {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .story-card h2 {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  .story-card p {
+    font-size: 12px;
+  }
+}
+
+/* The smart banner is an app-install prompt for handheld devices only. */
+@media (min-width: 1200px) {
+  .site-preview {
+    width: min(100%, 1280px);
+  }
+
+  .smart-banner {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
