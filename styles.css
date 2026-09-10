@@ -29,7 +29,7 @@ button {
 }
 
 .site-preview {
-  width: min(100%, 360px);
+  width: 100%;
   min-height: 100vh;
   margin: 0 auto;
   overflow: hidden;
