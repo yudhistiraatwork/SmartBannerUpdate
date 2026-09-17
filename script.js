@@ -17,7 +17,7 @@ const featureSlides = [
   {
     image: "Assets/MockupVideoBaru.png",
     imageAlt: "Mockup fitur video Kompas.com",
-    title: "Tonton Berita, Lebih Seru",
+    title: "Video Berita Terbaru & Terkini",
   },
 ];
 

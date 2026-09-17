@@ -5,6 +5,7 @@ const featureSlides = [
     prefix: "KOMPAS.com",
     keyword: "Official App",
     suffix: "",
+    highlight: false,
   },
   {
     image: "Assets/MockupWP.png",
@@ -25,14 +26,14 @@ const featureSlides = [
     imageAlt: "Mockup fitur video Kompas.com",
     prefix: "",
     keyword: "Video Berita",
-    suffix: "Terbaru & Terkini",
+    suffix: " Terbaru & Terkini",
   },
 ];
 
 const visual = document.querySelector("[data-keyword-visual]");
 const title = document.querySelector("[data-keyword-title]");
 const transitionDuration = 420;
-const showcaseDuration = 3800;
+const showcaseDuration = 1000;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 let activeSlide = 0;
@@ -43,16 +44,19 @@ featureSlides.slice(1).forEach((feature) => {
 });
 
 function renderTitle(feature) {
-  const keyword = document.createElement("mark");
-  keyword.textContent = feature.keyword;
-
   title.replaceChildren();
 
   if (feature.prefix) {
     title.append(`${feature.prefix} `);
   }
 
-  title.append(keyword);
+  if (feature.highlight === false) {
+    title.append(feature.keyword);
+  } else {
+    const keyword = document.createElement("mark");
+    keyword.textContent = feature.keyword;
+    title.append(keyword);
+  }
 
   if (feature.suffix) {
     title.append(feature.suffix);

@@ -17,14 +17,14 @@ const featureSlides = [
   {
     image: "Assets/MockupVideoBaru.png",
     imageAlt: "Mockup fitur video Kompas.com",
-    title: "Tonton Berita, Lebih Seru",
+    title: "Video Berita Terbaru & Terkini",
   },
 ];
 
 const visual = document.querySelector("[data-shimmer-visual]");
 const title = document.querySelector("[data-shimmer-title]");
 const transitionDuration = 420;
-const showcaseDuration = 3800;
+const showcaseDuration = 1000;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 let activeSlide = 0;
