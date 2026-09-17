@@ -1,0 +1,473 @@
+:root {
+  color: #242424;
+  background: #e8e8e8;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #e8e8e8;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+.shimmer-preview {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.article-preview {
+  background: #292929;
+}
+
+.article-preview__notice {
+  position: relative;
+  display: grid;
+  height: 30px;
+  place-items: center;
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.article-preview__notice span:last-child {
+  position: absolute;
+  top: 7px;
+  right: 16px;
+  display: grid;
+  width: 14px;
+  height: 14px;
+  place-items: center;
+  border-radius: 50%;
+  background: #898989;
+  color: #292929;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.article-preview__ad {
+  width: min(calc(100% - 40px), 320px);
+  height: min(125vw, 480px);
+  margin: 0 auto;
+  background: #d9d9d9;
+}
+
+.shimmer-smart-banner {
+  position: relative;
+  display: flex;
+  height: 65px;
+  align-items: flex-end;
+  background: #292929;
+}
+
+.shimmer-smart-banner__surface {
+  width: 100%;
+  height: 52px;
+  border-radius: 8px 8px 0 0;
+  background: #db4f23;
+}
+
+.shimmer-smart-banner__visual-frame {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 16px;
+  width: 52px;
+  height: 65px;
+  overflow: hidden;
+}
+
+.shimmer-smart-banner__visual {
+  display: block;
+  width: 52px;
+  height: 65px;
+  object-fit: cover;
+  will-change: transform, opacity;
+}
+
+.shimmer-smart-banner__content {
+  display: flex;
+  width: 100%;
+  height: 52px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 0 16px 0 84px;
+}
+
+.shimmer-smart-banner__details {
+  min-width: 0;
+}
+
+.shimmer-smart-banner__message-viewport {
+  height: 18px;
+  overflow: hidden;
+}
+
+.shimmer-smart-banner__title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+  white-space: nowrap;
+  will-change: transform, opacity;
+}
+
+.shimmer-smart-banner__rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-top: 3px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.shimmer-smart-banner__stars {
+  display: flex;
+  gap: 1px;
+}
+
+.shimmer-smart-banner__stars img {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+
+.shimmer-smart-banner__dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.shimmer-smart-banner__install {
+  position: relative;
+  width: 50px;
+  height: 30px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border: 0;
+  border-radius: 8px;
+  padding: 0;
+  background: #ffffff;
+  color: #0f79c6;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+@media (max-width: 340px) {
+  .shimmer-smart-banner__visual-frame,
+  .shimmer-smart-banner__visual {
+    width: 40px;
+    height: 50px;
+  }
+
+  .shimmer-smart-banner__visual-frame {
+    left: 16px;
+  }
+
+  .shimmer-smart-banner__content {
+    gap: 0;
+    padding: 0 16px 0 72px;
+  }
+
+  .shimmer-smart-banner__install {
+    width: 40px;
+  }
+
+  .shimmer-smart-banner__install span {
+    font-size: 11px;
+  }
+}
+
+.shimmer-smart-banner__install span {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.shimmer-smart-banner__install::after {
+  position: absolute;
+  z-index: 0;
+  top: -45%;
+  left: -55%;
+  width: 42%;
+  height: 190%;
+  background: linear-gradient(90deg, transparent, rgb(157 215 246 / 90%), transparent);
+  content: "";
+  transform: translateX(-210%) skewX(-20deg);
+  animation: install-shimmer 3.4s ease-in-out infinite;
+}
+
+.shimmer-smart-banner__install:hover {
+  background: #f3f8fc;
+}
+
+.shimmer-smart-banner__install:focus-visible {
+  outline: 3px solid #102a43;
+  outline-offset: 3px;
+}
+
+.shimmer-smart-banner__visual.is-leaving,
+.shimmer-smart-banner__title.is-leaving {
+  animation: feature-slide-out 420ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.shimmer-smart-banner__visual.is-entering,
+.shimmer-smart-banner__title.is-entering {
+  animation: feature-slide-in 420ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes feature-slide-out {
+  to {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+}
+
+@keyframes feature-slide-in {
+  from {
+    transform: translateY(110%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes install-shimmer {
+  0%,
+  54% {
+    transform: translateX(-210%) skewX(-20deg);
+  }
+
+  76%,
+  100% {
+    transform: translateX(430%) skewX(-20deg);
+  }
+}
+
+.site-header {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 16px;
+  background: #121212;
+  color: #ffffff;
+}
+
+.site-header__brand {
+  flex: 0 0 auto;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.site-header__brand span {
+  color: #f4511e;
+}
+
+.site-header nav {
+  display: flex;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.site-header nav::-webkit-scrollbar {
+  display: none;
+}
+
+.site-header a {
+  flex: 0 0 auto;
+  padding: 8px 10px;
+  color: #ffffff;
+  font-size: 12px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.story-preview {
+  padding: 26px 16px 48px;
+}
+
+.story-preview__label {
+  margin: 0 0 8px;
+  color: #e54c20;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.story-preview h1 {
+  max-width: 620px;
+  margin: 0;
+  color: #242424;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.story-preview__image {
+  height: 180px;
+  margin: 20px 0 14px;
+  border-radius: 8px;
+  background: linear-gradient(160deg, #85d5ed 0%, #a8dcdb 52%, #eca76c 53%, #ca7954 100%);
+}
+
+.story-preview > p:last-child {
+  margin: 0;
+  color: #697077;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (min-width: 600px) {
+  .shimmer-preview {
+    width: min(100%, 960px);
+    box-shadow: 0 0 28px rgb(0 0 0 / 12%);
+  }
+
+  .article-preview__notice {
+    height: 34px;
+    font-size: 9px;
+  }
+
+  .article-preview__notice span:last-child {
+    top: 9px;
+    right: 32px;
+  }
+
+  .article-preview__ad {
+    width: min(calc(100% - 64px), 640px);
+    height: clamp(360px, 62vw, 480px);
+  }
+
+  .shimmer-smart-banner {
+    height: 78px;
+  }
+
+  .shimmer-smart-banner__surface,
+  .shimmer-smart-banner__content {
+    height: 64px;
+  }
+
+  .shimmer-smart-banner__visual-frame,
+  .shimmer-smart-banner__visual {
+    width: 58px;
+    height: 72px;
+  }
+
+  .shimmer-smart-banner__visual-frame {
+    left: 32px;
+  }
+
+  .shimmer-smart-banner__content {
+    padding: 0 32px 0 110px;
+  }
+
+  .shimmer-smart-banner__message-viewport {
+    height: 21px;
+  }
+
+  .shimmer-smart-banner__title {
+    font-size: 14px;
+  }
+
+  .shimmer-smart-banner__rating {
+    font-size: 12px;
+  }
+
+  .shimmer-smart-banner__stars img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .shimmer-smart-banner__install {
+    width: 66px;
+    height: 36px;
+    border-radius: 9px;
+  }
+
+  .shimmer-smart-banner__install span {
+    font-size: 14px;
+    line-height: 36px;
+  }
+
+  .site-header {
+    min-height: 68px;
+    padding: 0 32px;
+  }
+
+  .site-header__brand {
+    font-size: 25px;
+  }
+
+  .site-header a {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .story-preview {
+    padding: 36px 32px 60px;
+  }
+
+  .story-preview h1 {
+    font-size: 32px;
+  }
+
+  .story-preview__image {
+    height: 280px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .shimmer-preview {
+    width: min(100%, 1280px);
+  }
+
+  .shimmer-smart-banner {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .shimmer-smart-banner__visual.is-leaving,
+  .shimmer-smart-banner__title.is-leaving,
+  .shimmer-smart-banner__visual.is-entering,
+  .shimmer-smart-banner__title.is-entering {
+    animation: none;
+  }
+}

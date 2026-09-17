@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#151515" />
+    <title>Kompas.com Smart Banner - Keyword Highlight</title>
+    <link rel="preload" as="image" href="Assets/MockupLogo.png" />
+    <link rel="preload" as="image" href="Assets/MockupWP.png" />
+    <link rel="preload" as="image" href="Assets/MockupPodcast.png" />
+    <link rel="preload" as="image" href="Assets/MockupVideoBaru.png" />
+    <link rel="stylesheet" href="keyword-banner.css" />
+  </head>
+  <body>
+    <main class="keyword-preview">
+      <section class="keyword-context" aria-label="Pratinjau artikel Kompas.com">
+        <div class="keyword-context__notice">
+          <span>Iklan - Scroll ke bawah untuk melanjutkan</span>
+          <span aria-hidden="true">&times;</span>
+        </div>
+        <div class="keyword-context__ad" aria-label="Advertisement"></div>
+
+        <aside class="keyword-smart-banner" aria-label="Unduh aplikasi Kompas.com">
+          <div class="keyword-smart-banner__surface">
+            <div class="keyword-smart-banner__visual-frame">
+              <img
+                class="keyword-smart-banner__visual"
+                src="Assets/MockupLogo.png"
+                alt="Mockup aplikasi Kompas.com"
+                width="48"
+                height="60"
+                data-keyword-visual
+              />
+            </div>
+
+            <div class="keyword-smart-banner__content">
+              <div class="keyword-smart-banner__details">
+                <div class="keyword-smart-banner__message-viewport">
+                  <p class="keyword-smart-banner__title" data-keyword-title>
+                    <span>KOMPAS.com</span> <mark>Official App</mark>
+                  </p>
+                </div>
+                <div class="keyword-smart-banner__rating" aria-label="Penilaian 4.6 dari 5">
+                  <span class="keyword-smart-banner__stars" aria-hidden="true">
+                    <img src="Assets/figma-star.svg" alt="" width="12" height="12" />
+                    <img src="Assets/figma-star.svg" alt="" width="12" height="12" />
+                    <img src="Assets/figma-star.svg" alt="" width="12" height="12" />
+                    <img src="Assets/figma-star.svg" alt="" width="12" height="12" />
+                    <img src="Assets/figma-star-half.svg" alt="" width="12" height="12" />
+                  </span>
+                  <span>4.6/5</span>
+                  <span class="keyword-smart-banner__dot" aria-hidden="true"></span>
+                  <span>Gratis</span>
+                </div>
+              </div>
+
+              <button class="keyword-smart-banner__install" type="button" aria-label="Instal aplikasi Kompas.com">Instal</button>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <header class="keyword-header">
+        <div class="keyword-header__brand">KOMPAS<span>.com</span></div>
+        <nav aria-label="Navigasi Travel">
+          <a href="#travel">Travel</a>
+          <a href="#berita">Travel News</a>
+          <a href="#ide">Travel Ideas</a>
+        </nav>
+      </header>
+
+      <section class="keyword-story" id="travel" aria-label="Berita Travel">
+        <p class="keyword-story__label">Travel</p>
+        <h1>Temukan cara baru mengikuti berita lewat aplikasi Kompas.com</h1>
+        <div class="keyword-story__image" aria-hidden="true"></div>
+        <p>Berita, audio, dan video tersaji dalam satu pengalaman yang nyaman.</p>
+      </section>
+    </main>
+
+    <script src="keyword-banner.js"></script>
+  </body>
+</html>
