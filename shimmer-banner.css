@@ -71,14 +71,14 @@ button {
 .shimmer-smart-banner {
   position: relative;
   display: flex;
-  height: 65px;
+  height: 60px;
   align-items: flex-end;
   background: #292929;
 }
 
 .shimmer-smart-banner__surface {
   width: 100%;
-  height: 52px;
+  height: 48px;
   border-radius: 8px 8px 0 0;
   background: linear-gradient(100deg, #0ea5e9 0%, #1e3a8a 100%);
 }
@@ -88,15 +88,15 @@ button {
   z-index: 1;
   bottom: 0;
   left: 16px;
-  width: 52px;
-  height: 65px;
+  width: 48px;
+  height: 60px;
   overflow: hidden;
 }
 
 .shimmer-smart-banner__visual {
   display: block;
-  width: 52px;
-  height: 65px;
+  width: 48px;
+  height: 60px;
   object-fit: cover;
   will-change: transform, opacity;
 }
@@ -104,11 +104,11 @@ button {
 .shimmer-smart-banner__content {
   display: flex;
   width: 100%;
-  height: 52px;
+  height: 48px;
   align-items: center;
   justify-content: space-between;
   gap: 4px;
-  padding: 0 16px 0 84px;
+  padding: 0 16px 0 80px;
 }
 
 .shimmer-smart-banner__details {
@@ -366,7 +366,7 @@ button {
   }
 
   .shimmer-smart-banner {
-    height: 78px;
+    height: 76px;
   }
 
   .shimmer-smart-banner__surface,
@@ -376,8 +376,8 @@ button {
 
   .shimmer-smart-banner__visual-frame,
   .shimmer-smart-banner__visual {
-    width: 58px;
-    height: 72px;
+    width: 56px;
+    height: 70px;
   }
 
   .shimmer-smart-banner__visual-frame {
@@ -385,7 +385,7 @@ button {
   }
 
   .shimmer-smart-banner__content {
-    padding: 0 32px 0 110px;
+    padding: 0 32px 0 108px;
   }
 
   .shimmer-smart-banner__message-viewport {
