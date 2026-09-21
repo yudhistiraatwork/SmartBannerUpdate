@@ -26,7 +26,7 @@ const featureSlides = [
     imageAlt: "Mockup fitur video Kompas.com",
     prefix: "",
     keyword: "Video Berita",
-    suffix: " Terbaru & Terkini",
+    suffix: " Terupdate",
   },
 ];
 
