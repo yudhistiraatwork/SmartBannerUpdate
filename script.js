@@ -23,7 +23,8 @@ const featureSlides = [
 
 const visual = document.querySelector("[data-feature-visual]");
 const title = document.querySelector("[data-feature-title]");
-const transitionDuration = 420;
+const exitTransitionDuration = 700;
+const enterTransitionDuration = 420;
 const showcaseDuration = 1000;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -57,8 +58,8 @@ function showNextFeature() {
       visual.classList.remove("is-entering");
       title.classList.remove("is-entering");
       window.setTimeout(showNextFeature, showcaseDuration);
-    }, transitionDuration);
-  }, transitionDuration);
+    }, enterTransitionDuration);
+  }, exitTransitionDuration);
 }
 
 if (!reducedMotion) {

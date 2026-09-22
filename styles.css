@@ -172,12 +172,12 @@ button {
 }
 
 .smart-banner__install {
-  width: 47px;
+  width: 56px;
   height: 28px;
   flex: 0 0 auto;
   border: 0;
   border-radius: 8px;
-  padding: 6px 8px;
+  padding: 6px 10px;
   background: #ffffff;
   color: #0f79c6;
   font-family: Inter, Arial, Helvetica, sans-serif;
@@ -203,7 +203,7 @@ button {
 
 .smart-banner__visual.is-leaving,
 .smart-banner__title.is-leaving {
-  animation: feature-sink-out 420ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: feature-sink-out 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .smart-banner__visual.is-entering,
@@ -862,10 +862,10 @@ button {
   }
 
   .smart-banner__install {
-    width: 60px;
+    width: 64px;
     height: 34px;
     border-radius: 9px;
-    padding: 7px 10px;
+    padding: 7px 12px;
     font-size: 13px;
     line-height: 18px;
   }
